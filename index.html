@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Favicon Icons -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicon_io/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon_io/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="./favicon_io/site.webmanifest" />
+		<!--  -->
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap"
+			rel="stylesheet" />
+		<!--  -->
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./css/style.css" />
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>We Care for Furs</title>
+	</head>
+	<body class="h-screen">
+		<nav class="px-10 py-6 lg:py-4">
+			<div class="container flex justify-between max-w-9xl mx-auto">
+				<div class="hidden lg:flex w-1/3 justify-center items-center">
+					<ul class="flex">
+						<li class="px-4 font-bold nav-items text-base">
+							<a href="#what-we-do-section">About us</a>
+						</li>
+						<li class="px-4 font-bold nav-items text-base">
+							<a href="#check-your-furs-health">Check your furs health</a>
+						</li>
+					</ul>
+				</div>
+				<div class="flex lg:w-1/3 justify-center items-center">
+					<h1
+						id="home"
+						class="lg:px-2 px-10 text-2xl lg:text-3xl navbar-brand-heading tracking-wider">
+						<a href="#home">We Care for <span>furs</span></a>
+					</h1>
+				</div>
+				<div class="hidden lg:flex justify-center items-center font-bold w-1/3">
+					<div class="px-6 mx-4 rounded-xl py-2 text-lg log-in-btn-hover">
+						<a id="log-in-btn" href="#">Log in</a>
+					</div>
+					<div class="px-6 mx-4 rounded-xl py-2 text-lg sign-up-btn-hover">
+						<a id="sign-up-btn" href="#">Sign up</a>
+					</div>
+				</div>
+
+				<div class="lg:hidden flex justify-center items-center">
+					<button class="hamburger-menu">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="mobile-menu-items hidden lg:hidden mt-4 max-w-6xl">
+				<ul class="block text-center">
+					<li class="py-2 hover:bg-gray-300 font-bold nav-items text-base">
+						<a href="#">About us</a>
+					</li>
+					<li class="py-2 hover:bg-gray-300 font-bold nav-items text-base">
+						<a href="#">Check your furs health</a>
+					</li>
+					<div class="px-6 mx-4 rounded-xl py-2 text-lg log-in-btn-hover">
+						<a id="log-in-btn" href="#">Log in</a>
+					</div>
+					<div class="px-6 mx-4 rounded-xl py-2 text-lg sign-up-btn-hover">
+						<a id="sign-up-btn" href="#">Sign up</a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<header class="md:h-3/6 lg:h-3/4 mx-auto py-20">
+			<div
+				class="container max-w-6xl flex flex-col-reverse md:flex-row items-center justify-evenly mx-auto">
+				<div
+					class="header-quotes my-6 flex text-xl md:text-3xl lg:text-5xl justify-center items-center flex-wrap w-1/2 mx-auto text-center md:text-left"></div>
+
+				<div class="dog-images-grid mx-auto w-1/3 h-1/3">
+					<div id="dimg-1">
+						<img src="./images/dog-pic-10.jpg" alt="" />
+					</div>
+					<div id="dimg-2">
+						<img src="./images/dog-pic-11.jpg" alt="" />
+					</div>
+					<div id="dimg-3">
+						<img src="./images/dog-pic-5.jpg" alt="" />
+					</div>
+					<div id="dimg-4">
+						<img src="./images/dog-pic-16.jpg" alt="" />
+					</div>
+					<div id="dimg-5">
+						<img src="./images/dog-pic-13.jpg" alt="" />
+					</div>
+					<div id="dimg-6">
+						<img src="./images/dog-pic-14.jpg" alt="" />
+					</div>
+					<div id="dimg-7">
+						<img src="./images/dog-pic-8.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section id="what-we-do-section" class="py-20">
+			<div class="flex justify-center items-center py-12">
+				<h1 class="text-3xl lg:text-4xl">What we do?</h1>
+			</div>
+			<div class="w-full lg:max-w-4xl flex flex-col lg:flex-row justify-center items-center lg:justify-evenly lg:mx-auto my-8">
+				<div class="w-1/3 lg:mx-8">
+					<div class="profile-box p-12 lg:p-20 rounded-xl"></div>
+					<div class="my-4 text-center">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+						nobis, tempora deleniti molestias totam blanditiis!
+					</div>
+				</div>
+				<div class="w-1/3 lg:mx-8">
+					<div class="profile-box p-12 lg:p-20 rounded-xl"></div>
+					<div class="my-4 text-center">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+						nobis, tempora deleniti molestias totam blanditiis!
+					</div>
+				</div>
+				<div class="w-1/3 lg:mx-8">
+					<div class="profile-box p-12 lg:p-20 rounded-xl"></div>
+					<div class="my-4 text-center">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+						nobis, tempora deleniti molestias totam blanditiis!
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="check-your-furs-health" class="my-10 h-fit py-20">
+			<div class="flex justify-center items-center text-xl md:text-3xl lg:text-4xl mb-10">
+				<h1>Want to check your furs health...</h1>
+			</div>
+
+			<div class="container flex justify-center mx-auto lg:w-1/6">
+				<a
+					id="check-health-btn"
+					class="font-bold text-center text-xl px-6 py-6 rounded-xl"
+					href="#"
+					>Click Here!</a
+				>
+			</div>
+		</section>
+
+		<footer class="footer py-10">
+			<div class="flex flex-col justify-center items-center mx-auto">
+				<h1 class="my-4">❤️ to all fury friends...</h1>
+				<h1 class="my-2">© All copyrights reserved 2023</h1>
+			</div>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
