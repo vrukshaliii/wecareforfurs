@@ -1,0 +1,234 @@
+{% load compress %} {% load static %}
+
+<!DOCTYPE html>
+<html class="scroll-smooth hover:scroll-auto" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeCareForFurs™</title>
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+    {% endcompress %}
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/dcb81a3e29.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="h-screen">
+    <nav
+      class="sticky top-0 bg-rose-300 border-gray-200 px-2 py-4 sm:px-4 py-2.5 dark:bg-gray-900"
+    >
+      <div
+        class="container max-w-5xl flex flex-wrap items-center justify-between mx-auto"
+      >
+        <a href="#" class="flex items-center">
+          <span
+            class="self-center text-2xl text-rose-700 font-semibold whitespace-nowrap dark:text-white"
+            ><i class="fa-solid fa-paw px-2"></i>We care for
+            <span class="underline hover:text-rose-400">furs</span></span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-rose-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-rose-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block py-2 pl-3 pr-4 text-white bg-rose-700 rounded md:bg-transparent md:text-rose-500 md:p-0 dark:text-white"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#what-we-do"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-rose-400 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#check-furs-health"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-rose-400 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Check your furs health</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="text-center h-[75vh] py-10 bg-rose-300">
+      <h1
+        class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-rose-700 md:text-5xl lg:text-6xl dark:text-white"
+      >
+        We invest in the world’s potential
+      </h1>
+
+      <div class="flex flex-col justify-center items-center">
+        <img
+          class="max-w-5xl"
+          src="{% static 'images/dogs-collage.jpg' %}"
+          alt="dogs-collage"
+        />
+      </div>
+    </header>
+
+    <h1
+      id="what-we-do"
+      class="text-5xl font-bold text-rose-700 text-center py-8"
+    >
+      What we do?
+    </h1>
+    <section class="flex flex-col my-6 md:flex-row md:justify-center h-[50vh]">
+      <div
+        class="max-w-sm mx-auto lg:mx-6 my-6 bg-white border border-rose-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <!-- <img
+            class="rounded-t-lg"
+            src="https://static.tnn.in/photo/msid-93415263,imgsize-491555,width-100,height-200,resizemode-75/93415263.jpg"
+            alt=""
+          /> -->
+        <div class="text-rose-900 text-center mt-4">
+          <i class="fa-solid fa-lightbulb text-5xl"></i>
+        </div>
+
+        <div class="p-5 text-center">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+            >
+              Comprehensive Solution
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-rose-300 dark:text-gray-400">
+            We Care for Furs offers a comprehensive solution to pet owners,
+            enabling them to easily detect skin diseases in their pets from the
+            comfort of their own home
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="max-w-sm mx-auto lg:mx-6 my-6 bg-white border border-rose-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <!-- <img
+            class="rounded-t-lg"
+            src="https://static.tnn.in/photo/msid-93415263,imgsize-491555,width-100,height-200,resizemode-75/93415263.jpg"
+            alt=""
+          /> -->
+        <div class="text-rose-900 text-center mt-4">
+          <i class="fa-solid fa-computer text-5xl"></i>
+        </div>
+        <div class="p-5 text-center">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+            >
+              Digital Platform
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-rose-300 dark:text-gray-400">
+            Whether you're looking for a pet care center, We Care for Furs is a
+            digital platform for pet skin disease detection that you can trust.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="max-w-sm mx-auto lg:mx-6 my-6 bg-white border border-rose-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <!-- <img
+            class="rounded-t-lg"
+            src="https://static.tnn.in/photo/msid-93415263,imgsize-491555,width-100,height-200,resizemode-75/93415263.jpg"
+            alt=""
+          /> -->
+        <div class="text-rose-900 text-center mt-4">
+          <i class="fa-solid fa-sack-dollar text-5xl"></i>
+        </div>
+        <div class="p-5 text-center">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+            >
+              Free of cost
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-rose-300 dark:text-gray-400">
+            We Care for Furs is free of cost, fast, convenient, and easy to use
+            with just the click of a button.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="check-furs-health"
+      class="mx-auto py-10 bg-rose-500 text-center"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="my-6 text-2xl font-extrabold leading-none tracking-tight text-rose-300 md:text-5xl lg:text-6xl dark:text-white"
+        >
+          Check your furs health!
+        </h1>
+        <a
+          href="{% url 'show' %}"
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-rose-300 rounded-lg hover:bg-rose-700 dark:focus:ring-blue-900"
+        >
+          Learn more
+          <svg
+            class="w-5 h-5 ml-2 -mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <footer
+      class="mx-auto bg-rose-500 shadow md:px-6 md:py-10 dark:bg-gray-900"
+    >
+      <span
+        class="block text-sm text-rose-300 sm:text-center dark:text-gray-400"
+        >© 2023 <a href="#" class="hover:underline">WeCareForFurs™</a>. All
+        Rights Reserved.
+      </span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  </body>
+</html>

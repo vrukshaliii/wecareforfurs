@@ -1,0 +1,80 @@
+{% load compress %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check your furs health</title>
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+    {% endcompress %}
+  </head>
+  <body
+    class="h-screen scroll-smooth bg-rose-300 flex flex-col justify-center items-center"
+  >
+    <div class="py-10">
+      <a href="#" class="flex justify-center">
+        <p
+          class="self-center text-5xl text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
+        >
+          We care for <span class="underline hover:text-rose-400">furs</span>
+        </p>
+      </a>
+    </div>
+    <div
+      class="container max-w-3xl flex flex-col flex-wrap items-center justify-center mx-auto"
+    >
+      <label
+        class="block text-center text-sm font-medium text-rose-900 dark:text-white"
+        for="user_avatar"
+        >Upload furs picture</label
+      >
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input
+          type="file"
+          class="block w-full my-4 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          aria-describedby="user_avatar_help"
+          id="user_avatar"
+          name="img"
+        />
+        <div
+          class="flex items-center mt-4 justify-center px-5 py-3 text-base font-medium text-center text-white bg-rose-500 rounded-lg hover:bg-rose-700 dark:focus:ring-blue-900"
+        >
+          <input type="submit" name="submit" value="Upload" />
+        </div>
+      </form>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <div class="max-w-4xl bg-gray-50 text-center px-4 py-10 my-4 rounded-lg">
+        <h1
+          class="self-center text-2xl my-2 text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
+        >
+          {{name}}hhh
+        </h1>
+        <h2
+          class="self-center text-lg text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
+        >
+          Precautions
+        </h2>
+        <p
+          class="text-rose-300 dark:text-white"
+        >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae et
+        tempora dolorum voluptatem. Aut vero quo minus iste. Reprehenderit nobis
+        doloremque in recusandae cupiditate sed assumenda, ea ipsa dolorum quasi
+        impedit fuga veritatis, voluptatum odit harum quia est enim expedita
+        porro aliquam minus exercitationem quos quibusdam? Velit voluptatibus
+        error deleniti obcaecati laborum alias molestias iusto unde dolorum hic
+        natus neque, voluptatum rem. Maiores iste repellat pariatur nulla
+        aliquid unde ullam rerum, illo saepe dolores fuga nobis sed similique
+        numquam impedit sapiente natus reiciendis assumenda ea? Molestias
+        delectus cumque veniam iste eveniet atque ullam id odit laborum,
+        reprehenderit voluptate sunt harum!
+      </div>
+    </div>
+  </body>
+</html>
