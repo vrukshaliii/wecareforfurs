@@ -1,0 +1,12 @@
+pycocotools
+split-folders
+opencv-python
+keras
+tensorflow
+numpy
+scipy
+sklearn
+matplotlib
+seaborn
+pickle
+os
