@@ -1168,10 +1168,6 @@ input:checked + .toggle-bg {
   display: none;
 }
 
-.h-1\/2 {
-  height: 50%;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -1184,20 +1180,16 @@ input:checked + .toggle-bg {
   height: 1.5rem;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .h-\[75vh\] {
   height: 75vh;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[55vh\] {
-  height: 55vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .w-1\/2 {
@@ -1677,6 +1669,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-rose-500 {
+  --tw-text-opacity: 1;
+  color: rgb(244 63 94 / var(--tw-text-opacity));
 }
 
 .underline {

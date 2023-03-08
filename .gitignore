@@ -1,4 +1,9 @@
 node_modules/
 
+show_result/migrations
 
 media/
+
+db/
+
+fur-project/

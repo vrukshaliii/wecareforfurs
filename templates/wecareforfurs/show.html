@@ -53,17 +53,73 @@
         <h1
           class="self-center text-2xl my-2 text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
         >
-          {{ prediction }}
+          Results: {{ prediction }}
         </h1>
         <h2
-          class="self-center text-lg text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
+          class="self-center text-sm text-rose-700 font-medium leading-none tracking-tight whitespace-nowrap dark:text-white"
+        >
+          Accuracy: {{accuracy}}%
+        </h2>
+        <h2
+          class="self-center text-lg py-4 text-rose-700 font-extrabold leading-none tracking-tight whitespace-nowrap dark:text-white"
         >
           Precautions
         </h2>
-        <p
+        <!-- <p
           class="text-rose-300 dark:text-white"
         >
 
+        </p> -->
+        <p>
+          {% if prediction == 'Bacterial' %}
+
+          <span class="text-rose-500">Bacterial diseases can affect dogs and cause various health problems. Here are some precautions you can take to prevent bacterial infections in dogs:</span>
+          <ul class="text-rose-300">
+            <li><strong class="text-rose-900">Vaccination:</strong> Make sure your dog receives all recommended vaccinations. Vaccinations can protect dogs from some of the most common bacterial diseases, such as distemper, parvovirus, and leptospirosis.</li>
+            <li><strong class="text-rose-900">Hygiene:</strong> Keep your dog clean and groomed regularly. Regular baths and brushing can help remove dirt and bacteria from your dog's coat, reducing the risk of bacterial infections.</li>
+            <li><strong class="text-rose-900">Clean Environment:</strong> Keep your dog's living area clean and disinfected. Use a pet-safe disinfectant to clean their bedding, toys, and food and water bowls regularly.</li>
+            <li><strong class="text-rose-900">Healthy Diet:</strong> Provide your dog with a healthy and balanced diet to help maintain their immune system. A strong immune system can help fight off bacterial infections.</li>
+            <li><strong class="text-rose-900">Avoid Exposure:</strong> Avoid exposing your dog to other sick animals or contaminated environments. For example, don't let your dog drink from stagnant water sources or eat spoiled food.</li>
+            <li><strong class="text-rose-900">Regular Vet Checkups:</strong>Schedule regular checkups with your veterinarian. They can check for signs of bacterial infections and recommend preventive measures.</li>
+            <li><strong class="text-rose-900">Treatments:</strong> If your dog is diagnosed with a bacterial infection, follow your veterinarian's instructions carefully. Treatment may include antibiotics, rest, and supportive care.</li>
+          </ul>
+          <span class="text-rose-500">Taking these precautions can help prevent bacterial infections in dogs and keep them healthy and happy.</span>
+          
+
+          {% elif prediction == 'Fungal' %}
+          <span class="text-rose-500">Fungal infections are a common health concern for dogs, especially in humid environments. Here are some precautions you can take to prevent fungal infections in dogs:</span>
+          <ul class="text-rose-300">
+            <li><strong class="text-rose-900">Regular Grooming:</strong>Regular grooming, such as brushing and bathing, can help keep your dog's skin and coat clean and dry. This can help prevent fungal infections, especially in dogs with thick coats.</li>
+            <li><strong class="text-rose-900">Dry your dog thoroughly:</strong>After bathing or swimming, make sure to dry your dog thoroughly, especially in the areas where the skin folds. Fungi thrive in warm, moist environments, so keeping your dog's skin dry can help prevent fungal infections.</li>
+            <li><strong class="text-rose-900">Avoid wet areas:</strong>Avoid walking your dog in areas where there is standing water, such as puddles or ponds. These areas can be a breeding ground for fungi, which can cause infections in dogs.</li>
+            <li><strong class="text-rose-900">Check for skin lesions:</strong>Regularly check your dog's skin for any signs of lesions, redness, or irritation. Fungal infections can cause skin lesions and irritations, which can be an early sign of a fungal infection.</li>
+            <li><strong class="text-rose-900">Provide a healthy diet:</strong> balanced and healthy diet can help keep your dog's immune system strong and healthy. A strong immune system can help fight off fungal infections.</li>
+            <li><strong class="text-rose-900">Avoid sharing:</strong>Avoid sharing your dog's bedding, toys, or food with other dogs to reduce the risk of cross-contamination.</li>
+            <li><strong class="text-rose-900">Regular Vet Checkups:</strong>Schedule regular checkups with your veterinarian. They can check for signs of fungal infections and recommend preventive measures.</li>
+          </ul>
+          <span class="text-rose-500">If your dog shows any signs of a fungal infection, such as skin lesions, hair loss, or persistent itching, contact your veterinarian right away. Early detection and treatment can help prevent the spread of the infection and improve your dog's chances of a full recovery. </span>
+
+          {% elif prediction == 'Healthy' %}
+          <span class="text-rose-500">
+            <strong class="text-rose-900">Congratulations, your dog is healthy!!</strong>
+            A healthy dog is a happy dog. A well-balanced diet, regular exercise, and proper medical care are essential for maintaining your furry friend's health. 
+            Along with these measures, it is also important to keep their environment clean and safe, practice good hygiene, and prevent exposure to harmful substances. By taking these precautions, you can help ensure that your dog remains healthy and happy, allowing them to enjoy life to the fullest. A healthy dog is a cherished companion and a true source of joy for their owners.
+          </span>
+
+          {% elif prediction == 'Hypersensitivity' %}
+          <span class="text-rose-500">Hypersensitivity or allergic reactions can occur in dogs and can cause various symptoms, such as itching, rashes, and difficulty breathing. Here are some precautions you can take to prevent hypersensitivity disease in dogs:</span>
+          <ul class="text-rose-300">
+            <li><strong class="text-rose-900">Identify and avoid triggers:</strong>Identify any allergens that may trigger an allergic reaction in your dog and try to avoid them. Common allergens include pollen, dust mites, certain foods, and insect bites.</li>
+            <li><strong class="text-rose-900">Provide a healthy diet:</strong>A healthy and balanced diet can help support your dog's immune system and reduce the risk of hypersensitivity. Talk to your veterinarian about the best diet for your dog's specific needs.</li>
+            <li><strong class="text-rose-900">Use hypoallergenic products:</strong>Use hypoallergenic products, including shampoos and cleaning products, to reduce the risk of allergic reactions in dogs that are prone to allergies.</li>
+            <li><strong class="text-rose-900">Regular grooming:</strong>Regular grooming can help reduce the risk of skin irritation and infections, which can be a trigger for allergic reactions in dogs.</li>
+            <li><strong class="text-rose-900">Keep your home clean:</strong>Regularly clean your home to reduce the risk of dust and mold, which can trigger allergies in dogs. Vacuum regularly and use an air purifier to remove allergens from the air.</li>
+            <li><strong class="text-rose-900">Be cautious with medications:</strong>Be cautious when giving your dog any medications, as some dogs can have allergic reactions to certain medications. Always follow your veterinarian's instructions when giving medications to your dog.</li>
+            <li><strong class="text-rose-900">Regular Vet Checkups:</strong>Schedule regular checkups with your veterinarian. They can check for signs of allergies and recommend preventive measures.</li>
+          </ul>
+          <span class="text-rose-500">If your dog shows any signs of an allergic reaction, such as itching, rashes, or difficulty breathing, contact your veterinarian right away. Early detection and treatment can help prevent the allergic reaction from becoming severe and improve your dog's chances of a full recovery.</span>
+
+          {% endif %}
         </p>
       </div>
     </div>
