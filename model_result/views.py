@@ -5,7 +5,17 @@ import cv2
 import numpy as np
 
 
-new_model = tf.keras.models.load_model('model_finetuned1_10-0.98.h5')
+interpreter = tf.lite.Interpreter(model_path="model_fit_tf10-0.99.tflite")
+
+
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+
+interpreter.allocate_tensors()
+
+
+classes=['Bacterial', 'Fungal', 'Healthy', 'Hypersensitivity']
 
 
 def home(request):
@@ -13,22 +23,12 @@ def home(request):
 
 
 def load_image(filename):
-    IMAGE_SIZE = IMAGE_SIZE = [224, 224]
     img = cv2.imread(filename)
-    img = cv2.resize(img, (IMAGE_SIZE[0], IMAGE_SIZE[1]) )
-    img = img /255
-    
-    return img
+    new_img = cv2.resize(img, (224, 224))
+    new_img = new_img.astype(np.float32)
+    new_img = new_img / 255
 
-
-classes=['Bacterial', 'Fungal', 'Healthy', 'Hypersensitivity']
-
-
-# def predict(image):
-#     probabilities = new_model.predict(np.asarray([image]))[0]
-#     class_idx = np.argmax(probabilities)
-    
-#     return f"{classes[class_idx]} with confidence of {round(probabilities[class_idx]*100)}%"
+    return new_img    
 
 
 def predDisease(request):
@@ -40,14 +40,17 @@ def predDisease(request):
 
         input = f"./media/{uploaded_file}"
         img = load_image(str(input))
-        # prediction = predict(img)
 
-        probabilities = new_model.predict(np.asarray([img]))[0]
-        class_idx = np.argmax(probabilities)
+        interpreter.set_tensor(input_details[0]['index'], [img])
+    
+        # run the inference
+        interpreter.invoke()
+    
+        # output_details[0]['index'] = the index which provides the input
+        output_data = interpreter.get_tensor(output_details[0]['index'])
+        class_idx = np.argmax(output_data[0])
 
         return render(request, 'wecareforfurs/show.html', {
-            'prediction': classes[class_idx],
-            # 'precautions': json.dumps(cure[class_idx], indent=1),
-
+            'prediction': classes[class_idx]
         })
     return render(request, 'wecareforfurs/show.html')
