@@ -1,5 +1,7 @@
 # 🐾We care for Furs!
 
+![dogs-collage](https://user-images.githubusercontent.com/65615660/224222549-23bea03f-27bb-4de7-be38-7fe995fa9c47.jpg)
+
 Dogs were found to be the most popular pets in India, comprising 68 percent of pets owned, according to a January 2022 survey conducted by Rakuten Insight. Research has repeatedly demonstrated the significant role that pets play in an individual's life. Studies have indicated that pet ownership can lead to increased physical activity, lower serum cholesterol and triglyceride levels, and a reduced likelihood of cardiovascular events. Furthermore, owning a pet has been linked to lower levels of depression and mental stress, and greater self-esteem. While dogs can provide emotional and mental health benefits, they are also susceptible to various diseases and infections, which can pose a risk to certain groups such as young children, pregnant women, the elderly, and immunocompromised individuals. Direct or indirect contact with dogs has been identified as a risk factor for numerous zoonotic infections caused by bacteria, fungi, parasites, and viruses.
 
 The objective of this project was to predict type of skin disease , a zoonotic disease, by utilizing diverse machine-learning models and evaluating their performance based on various parameters. The ultimate goal was to detect the type of disease an offer recommendations for precautions that should be taken to prevent the spread of the disease.
@@ -54,6 +56,8 @@ The selected model will be deployed using a Docker container. The Dockerfile wil
 ```
 docker run -dit -p 8000:8000  --name=<name_of_container>  -v  <location_store_images>:/home/app/webapp/media/  vrukshali26/wecareforfurs:v1
 ```
+
+https://user-images.githubusercontent.com/65615660/224222387-2609f137-6516-4c8c-8ea0-d047c14bd23c.mp4
 
 # Conclusion:
 
