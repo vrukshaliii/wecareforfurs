@@ -50,7 +50,7 @@ The selected model will be deployed using a Docker container. The Dockerfile wil
 
 # Steps to run:
 
-**Docker image:** [vrukshali26/wecareforfurs:v1](https://hub.docker.com/repository/docker/vrukshali26/wecareforfurs/general)
+**Docker image:** [vrukshali26/wecareforfurs:v1](https://hub.docker.com/r/vrukshali26/wecareforfurs)
 
 **Run the container:** 
 ```
@@ -62,3 +62,7 @@ https://user-images.githubusercontent.com/65615660/224222387-2609f137-6516-4c8c-
 # Conclusion:
 
 This project aims to classify various types of dog skin diseases using deep learning models with images.
+
+# LICENSE
+
+This project is licensed under the MIT license. Feel free to use it. Thanks!
