@@ -7,3 +7,7 @@ media/
 db/
 
 fur-project/
+
+show_result/__pycache__
+
+model_result/__pycache__
