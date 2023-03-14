@@ -4,7 +4,7 @@
 
 Dogs were found to be the most popular pets in India, comprising 68 percent of pets owned, according to a January 2022 survey conducted by Rakuten Insight. Research has repeatedly demonstrated the significant role that pets play in an individual's life. Studies have indicated that pet ownership can lead to increased physical activity, lower serum cholesterol and triglyceride levels, and a reduced likelihood of cardiovascular events. Furthermore, owning a pet has been linked to lower levels of depression and mental stress, and greater self-esteem. While dogs can provide emotional and mental health benefits, they are also susceptible to various diseases and infections, which can pose a risk to certain groups such as young children, pregnant women, the elderly, and immunocompromised individuals. Direct or indirect contact with dogs has been identified as a risk factor for numerous zoonotic infections caused by bacteria, fungi, parasites, and viruses.
 
-The objective of this project was to predict type of skin disease , a zoonotic disease, by utilizing diverse machine-learning models and evaluating their performance based on various parameters. The ultimate goal was to detect the type of disease an offer recommendations for precautions that should be taken to prevent the spread of the disease.
+This project aims to predict various types of dog skin diseases, a zoonotic disease, by utilizing diverse machine-learning models and evaluating their performance based on various parameters. The ultimate goal is to detect the type of disease and offer recommendations for precautions that should be taken to prevent the spread of the disease.
 
 # Project Structure:
 
@@ -29,7 +29,7 @@ The project consists of the following components:
 
 # Dataset:
 
-The dataset consists of images of various dog skin diseases available on internet.
+The dataset consists of images of various dog skin diseases available on internet. The dataset is split into training, validation, and testing sets to train and evaluate the performance of the CNN.
 
 # Preprocessing:
 
@@ -61,7 +61,9 @@ https://user-images.githubusercontent.com/65615660/224222387-2609f137-6516-4c8c-
 
 # Conclusion:
 
-This project aims to classify various types of dog skin diseases using deep learning models with images.
+This project aims to develop a deep learning model that can accurately detect and classify dog skin diseases based on images. The model has trained on a publicly available dataset and achieved high accuracy on the testing set. The trained model can be used in veterinary clinics to assist veterinarians in the early detection and diagnosis of skin diseases in dogs.
+
+Overall, this project demonstrates the potential of deep learning in improving animal healthcare and emphasizes the importance of utilizing advanced technology to support veterinary professionals in their daily work.
 
 # LICENSE
 
