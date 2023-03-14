@@ -29,7 +29,7 @@ The project consists of the following components:
 
 # Dataset:
 
-The dataset consists of images of various dog skin diseases available on internet. The dataset is split into training, validation, and testing sets to train and evaluate the performance of the CNN.
+The dataset consists of images of various dog skin diseases available on internet. The dataset is split into training, validation, and testing sets. The training set will be used to train the model, the validation set will be used to tune hyperparameters, and the test set will be used to evaluate the final model.
 
 # Preprocessing:
 
