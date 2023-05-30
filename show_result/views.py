@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 
-interpreter = tf.lite.Interpreter(model_path="model_fit_tf10-0.99.tflite")
+interpreter = tf.lite.Interpreter(model_path="model_finetuned1_10-0.98.tflite")
 
 
 input_details = interpreter.get_input_details()
