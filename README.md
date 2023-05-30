@@ -21,7 +21,7 @@ The project consists of the following components:
 
 - python==3.9
 - Django
-- tensorflow==2.11.0
+- tensorflow
 - keras==2.11.0
 - opencv-python==4.7.0.72
 - numpy==1.21.5
@@ -50,11 +50,11 @@ The selected model will be deployed using a Docker container. The Dockerfile wil
 
 # Steps to run:
 
-**Docker image:** [vrukshali26/wecareforfurs:v1](https://hub.docker.com/r/vrukshali26/wecareforfurs)
+**Docker image:** [vrukshali26/wecareforfurs:v2](https://hub.docker.com/r/vrukshali26/wecareforfurs)
 
 **Run the container:** 
 ```
-docker run -dit -p 8000:8000  --name=<name_of_container>  -v  <location_store_images>:/home/app/webapp/media/  vrukshali26/wecareforfurs:v1
+docker run -dit -p 8000:8000  --name=<name_of_container>  -v  <location_store_images>:/home/app/webapp/media/  vrukshali26/wecareforfurs:v2
 ```
 
 https://user-images.githubusercontent.com/65615660/224222387-2609f137-6516-4c8c-8ea0-d047c14bd23c.mp4
